@@ -1,38 +1,343 @@
+/* App.css */
+/* Asegúrate de que este selector coincida con tu clase */
+.container {
+  max-width: 1200px; /* O el ancho que prefieras */
+  margin: 0 auto;
+  padding: 0 16px; /* Opcional, para algo de espacio lateral en pantallas pequeñas */
+}
+
+header, main, footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Layout general */
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
+}
+
+header,
+nav,
+main,
+footer {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f4f4f4;
+
+}
+
+/* Header */
+header {
+  background-color: #f4f4f4;
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.header-top img {
+  max-width: 150px;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #d4a017;
+}
+
+/* Hero Section */
+.hero-container {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-color: #495E57;
+}
+
+.hero {
+  background-color: #495E57;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  max-width: 600px;
+}
+
+/* Main */
+main {
+  flex: 1;
+  display: grid;
+  gap: 2rem;
+}
+
+.section {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.specials,
+.testimonials,
+.about,
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.special-card,
+.testimonial-card,
+.about-card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.specials-grid {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.special-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 220px;
+}
+.special-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.special-card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #f4ce14;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/*TESTIMONIOS*/
+.testimonials {
+  background: #f9f9f9;
+  padding: 2rem 0;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.testimonial-rating {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #f4ce14;
+  margin-bottom: 0.7rem;
+}
+
+.testimonial-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.testimonial-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.7rem;
+  border: 2px solid #f4ce14;
+}
+
+.testimonial-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: #333;
+}
+
+.testimonial-text {
+  font-size: 0.97rem;
+  color: #444;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/*DESCRIPCION*/
+.descripcion {
+  display: flex;
+  align-items: stretch;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+  min-height: 400px;
+  background: linear-gradient(90deg, #f4ce14 0%, #fffbe6 100%);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  overflow: hidden;
+  padding: 0;
+}
+
+.descripcion-texto {
+  flex: 1 1 50%;
+  max-width: 50%;
+  padding: 2.5rem 2rem 2.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.descripcion-texto h2 {
+  font-size: 2.5rem;
+  color: #495e57;
+  margin-bottom: 0.2em;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+}
+
+.descripcion-texto p:first-of-type {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1.2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.descripcion-texto h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 0.7em;
+  font-weight: 600;
+}
+
+.descripcion-texto p:last-of-type {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.descripcion-imagen {
+  flex: 1 1 50%;
+  max-width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: linear-gradient(120deg, #f4ce14 0%, #fffbe6 100%);
+}
+
+.descripcion-imagen img {
+  width: 98%;
+  max-width: 540px;
+  border-radius: 0 24px 24px 0;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+  object-fit: cover;
+  min-height: 340px;
+  border: 4px solid #fffbe6;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
   color: white;
+  padding: 2rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;   /* Asegura el mismo ancho máximo */
+  margin: auto;        /* Centra el footer */
 }
 
-.App-link {
-  color: #61dafb;
+footer h4 {
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive media query */
+@media (max-width: 768px) {
+  header,
+  nav,
+  main,
+  footer {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
   }
 }
