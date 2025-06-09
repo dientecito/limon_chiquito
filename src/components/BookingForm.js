@@ -3,7 +3,7 @@ import { useState } from 'react';
 function BookingForm({ availableTimes, dispatch, onSubmit }) {
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
-  const [guests, setGuests] = useState(1);
+  const [guests, setGuests] = useState(2);
   const [occasion, setOccasion] = useState('');
 
   const handleSubmit = (e) => {
@@ -28,6 +28,7 @@ function BookingForm({ availableTimes, dispatch, onSubmit }) {
         value={date}
         onChange={handleDateChange}
         required
+        min={new Date().toISOString().split('T')[0]}
       />
 
       <label htmlFor="res-time">Elige una hora</label>
@@ -52,10 +53,10 @@ function BookingForm({ availableTimes, dispatch, onSubmit }) {
       <input
         type="number"
         id="guests"
-        min="1"
+        min="2"
         max="10"
         value={guests}
-        onChange={(e) => setGuests(e.target.value)}
+        onChange={(e) => setGuests(Number(e.target.value))}
         required
       />
 
@@ -77,3 +78,4 @@ function BookingForm({ availableTimes, dispatch, onSubmit }) {
 }
 
 export default BookingForm;
+
