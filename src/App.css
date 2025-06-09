@@ -59,7 +59,7 @@ header {
 
 nav ul {
   display: flex;
-  gap: 1rem;
+  gap: 3rem; /* Aumenta la separación aquí */
   list-style: none;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -76,14 +76,10 @@ nav a:hover {
 }
 
 /* Hero Section */
-.hero-container {
+.hero-content {
   display: flex;
   align-items: center;
-  text-align: center;
-  padding: 2rem;
-  background-size: cover;
-  background-position: center;
-  background-color: #495E57;
+  justify-content: space-between;
 }
 
 .hero {
@@ -100,13 +96,148 @@ nav a:hover {
   margin-bottom: 0.5rem;
 }
 
-.hero h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
 .hero p {
   max-width: 600px;
+}
+
+.hero-text {
+  max-width: 60%;
+}
+
+.hero-img {
+  width: 350px; /* Ajusta el tamaño según prefieras */
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+/* Botón de llamada a la acción en el hero */
+.cta-btn {
+  display: inline-block;
+  background-color: #f4ce14;
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 1.2rem;
+}
+
+.cta-btn:hover {
+  background-color: #ffe066;
+  color: #495e57;
+}
+
+/*SPECIALS*/
+.section.specials {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  gap: 1rem;
+}
+
+.specials-list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center; /* Centra las cards dentro del contenedor */
+}
+
+.special-card {
+  /* Opcional: estilos para las cards */
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.specials h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: left; /* Centra el título */
+}
+
+/*TESTIMONIALS*/
+.testimonials {
+  width: 100%;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+.testimonial-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+/*CHICAGO*/
+.section-about {
+  background-color: #495E57;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: left;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap; /* Para que se adapte en móviles */
+}
+
+.about-card {
+  flex: 1;
+  min-width: 300px;
+  background-color: rgba(0, 0, 0, 0.2); /* negro con 20% opacidad (muy transparente) */
+  padding: 1.5rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px); /* opcional: da efecto desenfoque detrás */
+}
+
+
+.about-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* Main */

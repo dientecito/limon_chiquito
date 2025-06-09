@@ -8,17 +8,25 @@ const testimonials = [
 
 function CustomersSay() {
   return (
-    <section className="section testimonials">
-      <h2>What Our Customers Say</h2>
-      {testimonials.map((review, index) => (
-        <div className="testimonial-card" key={index}>
-          <h3>{review.name}</h3>
-          <p>{review.stars}</p>
-          <p>{review.text}</p>
-        </div>
-      ))}
-    </section>
+    <section className="testimonials">
+  <div className="testimonial-content">
+    <h2>What Our Customers Say</h2>
+    <div className="testimonial-wrapper">
+      <div className="testimonial-list">
+        {testimonials.map((review, index) => (
+          <div className="testimonial-card" key={index}>
+            <h3>{review.name}</h3>
+            <p>{review.stars}</p>
+            <p>{review.text}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
   );
 }
+
 
 export default CustomersSay;
