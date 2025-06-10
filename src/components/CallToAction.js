@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // <-- Agrega esta línea
-import heroImg from '../icons_assets/restauranfood_cuadrado.jpg'; // Cambia el nombre y ruta según tu imagen
+import { Link } from 'react-router-dom';
+import heroImg from '../icons_assets/restauranfood_cuadrado.jpg';
 
 function CallToAction() {
   return (
-    <section className="hero">
+    <section className="hero" aria-label="Promotional section for reservations">
       <div className="hero-content">
         <div className="hero-text">
           <h1>Little Lemon</h1>
           <h2>Chicago</h2>
-          <p>We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-          <Link to="/booking" className="cta-btn">Reserve a Table</Link> {/* Cambia el botón por Link */}
+          <p>Somos un restaurante mediterráneo de propiedad familiar, enfocado en recetas tradicionales servidas con un toque moderno. En cada plato combinamos la autenticidad de los sabores de siempre con una presentación cuidada y creativa. Nuestro compromiso es ofrecer una experiencia culinaria cálida y acogedora, donde cada visita se sienta como una comida en casa, pero con la calidad y el detalle de un restaurante de primera.</p>
+          <Link to="/booking" className="cta-btn" aria-label="On Click">Reserva tu mesa</Link>
         </div>
         <img src={heroImg} alt="Little Lemon restaurant" className="hero-img" />
       </div>
@@ -18,4 +18,4 @@ function CallToAction() {
   );
 }
 
-export default CallToAction
+export default CallToAction;

@@ -10,7 +10,7 @@ function CustomersSay() {
   return (
     <section className="testimonials">
   <div className="testimonial-content">
-    <h2>What Our Customers Say</h2>
+    <h2>Lo que dicen nuestros clientes</h2>
     <div className="testimonial-wrapper">
       <div className="testimonial-list">
         {testimonials.map((review, index) => (

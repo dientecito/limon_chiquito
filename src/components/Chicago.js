@@ -8,7 +8,7 @@ function Chicago() {
         <div className="about-card">
           <h2>Little Lemon - Chicago</h2>
           <p>
-            Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. The restaurant features a locally-sourced menu inspired by the flavors of the Mediterranean.
+            Especializado en cocina mediterránea, el restaurante ofrece un menú cuidadosamente elaborado con ingredientes frescos y de origen local, lo que garantiza sabor, calidad y compromiso con los productores de la zona. Además de su propuesta gastronómica, Little Lemon destaca por su carta de cócteles clásicos, preparados con esmero y perfectos para acompañar cualquier comida o celebrar un momento especial. Su ambiente informal pero lleno de vida lo convierte en el punto de encuentro ideal para quienes buscan disfrutar de una experiencia culinaria auténtica, cercana y llena de sabor.
           </p>
         </div>
         <div className="about-image">

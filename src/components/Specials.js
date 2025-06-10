@@ -24,7 +24,7 @@ const specials = [
 function Specials() {
   return (
     <section className="section specials">
-      <h2>This Week's Specials</h2>
+      <h2>Ofertas de esta semana</h2>
       <div className="specials-list">
         {specials.map((item, index) => (
           <div className="special-card" key={index}>

@@ -1,8 +1,9 @@
 import { useReducer } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BookingForm from '../components/BookingForm';
-import ReservationsList from '../components/ReservationsList'; // importa el componente de reservas
+import ReservationsList from '../components/ReservationsList';
 import { fetchAPI, submitAPI } from '../api';
+import './BookingPage.css';
 
 const formatDate = (date) => {
   return date instanceof Date
@@ -44,18 +45,22 @@ function BookingPage() {
   };
 
   return (
-    <main className="p-4" style={{ display: 'flex', gap: '40px' }}>
-      <section style={{ flex: 1, maxWidth: '400px' }}>
+    <main className="booking-page">
+      <section className="booking-form-section">
         <h1>Reserva tu mesa</h1>
-        <p>Por favor, rellena el siguiente formulario para hacer una reserva.</p>
-        <BookingForm
-          availableTimes={availableTimes}
-          dispatch={dispatch}
-          onSubmit={submitForm}
-        />
+        <p className="intro-text">
+          Por favor, rellena el siguiente formulario para hacer una reserva.
+        </p>
+        <div className="form-wrapper">
+          <BookingForm
+            availableTimes={availableTimes}
+            dispatch={dispatch}
+            onSubmit={submitForm}
+          />
+        </div>
       </section>
 
-      <section style={{ flex: 1, maxWidth: '400px' }}>
+      <section className="reservations-list-section">
         <ReservationsList />
       </section>
     </main>

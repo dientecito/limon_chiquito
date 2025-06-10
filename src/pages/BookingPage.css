@@ -1,0 +1,36 @@
+.booking-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  gap: 60px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background-color: #f4f4f4;
+}
+
+.booking-form-section,
+.reservations-list-section {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.booking-form-section h1 {
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.intro-text {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+.form-wrapper {
+  margin-top: 1rem;
+}

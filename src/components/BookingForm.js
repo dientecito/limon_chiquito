@@ -20,7 +20,11 @@ function BookingForm({ availableTimes, dispatch, onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ display: 'grid', maxWidth: '300px', gap: '20px' }}>
+    <form
+      onSubmit={handleSubmit}
+      aria-label="Formulario de reserva"
+      className="booking-form"
+    >
       <label htmlFor="res-date">Elige una fecha</label>
       <input
         type="date"
@@ -46,7 +50,9 @@ function BookingForm({ availableTimes, dispatch, onSubmit }) {
       </select>
 
       {availableTimes.length === 0 && (
-        <p style={{ color: 'red' }}>No hay horarios disponibles para esta fecha.</p>
+        <p className="error-message" aria-live="polite">
+          No hay horarios disponibles para esta fecha.
+        </p>
       )}
 
       <label htmlFor="guests">Número de invitados</label>
@@ -72,8 +78,15 @@ function BookingForm({ availableTimes, dispatch, onSubmit }) {
         <option value="aniversario">Aniversario</option>
       </select>
 
-      <button type="submit" disabled={availableTimes.length === 0}>Reservar mesa</button>
+      <button
+        type="submit"
+        aria-label="On Click"
+        disabled={availableTimes.length === 0}
+      >
+        Reservar mesa
+      </button>
     </form>
+
   );
 }
 
